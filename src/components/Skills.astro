@@ -1,0 +1,25 @@
+---
+import Headling from "@icons/Headling.astro";
+import { TECNOLOGIAS } from "@consts/tecnologias";
+---
+
+<section class="mt-25">
+  <div class="flex items-end gap-4">
+    <Headling />
+    <h3 class="text-4xl font-bold">Habili<span class="bg-linear-to-r bg-clip-text text-transparent from-blue-600 to-cyan-500">dades</span></h3>
+  </div>
+  <div class="flex justify-center items-center gap-8 mt-10">
+    {
+      TECNOLOGIAS.map((tecnologia) => {
+        const { nombreTecnologia, img } = tecnologia
+
+        return (
+          <article class="flex flex-col justify-between items-center flex-wrap w-40 h-32 border-2 rounded-4xl py-3 bg-blue-600/10">
+            <img class="w-14" src={`${img}`} alt={nombreTecnologia} />
+            <h3 class="text-xl font-semibold bg-linear-to-r from-blue-600 to-cyan-500 text-transparent bg-clip-text">{nombreTecnologia}</h3>
+          </article>
+        )
+      })
+    }
+  </div>
+</section>
