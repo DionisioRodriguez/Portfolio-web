@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+:root {
+  --text-xl: 1.25rem;
+  --text-lg: 1.125rem;
+  --text-base: 1rem;
+  --text-sm: 0.875rem;
+  --text-xs: 0.75rem;
+}
