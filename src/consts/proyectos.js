@@ -35,7 +35,7 @@ const TAGS = {
 export const PROYECTOS = [
   {
     tituloProyecto: "DR-carshop - E-commerce",
-    descripcion: "Es una tienda basada en los productos de la marca Toxic Shine. Fue parte de la entrega final del curso de JavaScript y Actualmente es mi web personal para la venta de productos.",
+    descripcion: "Se trata de una tienda en línea basada en productos de la marca Toxic Shine. Fue desarrollada como proyecto final del curso de JavaScript y actualmente funciona como mi sitio web personal para la comercialización de estos productos.",
     img: "../proyectos/dr-carshop.webp",
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     github: "https://github.com/DionisioRodriguez/DR-carshop",
