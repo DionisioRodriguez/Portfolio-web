@@ -40,7 +40,6 @@ export const PROYECTOS = [
     tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT],
     github: "https://github.com/DionisioRodriguez/DR-carshop",
     link: "https://github.com/DionisioRodriguez/DR-carshop",
-    class: "bg-linear-to-br from-neutral-500 to-gray-600"
   },
   {
     tituloProyecto: "DR-carshop - E-commerce",
