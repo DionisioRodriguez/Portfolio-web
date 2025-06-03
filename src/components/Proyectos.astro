@@ -1,0 +1,64 @@
+---
+import { PROYECTOS } from "@consts/proyectos";
+
+import Code from "@icons/Code.astro";
+import LinkButton from "./LinkButton.astro";
+import Link from "@icons/Link.astro"
+import Github from "@icons/Github.astro";
+---
+
+<section id="proyectos" class="mt-25">
+  <div class="flex items-end gap-4">
+    <Code class="size-7" />
+    <h1 class="text-3xl font-bold">Proyec<span class="bg-linear-to-r bg-clip-text text-transparent from-blue-600 to-cyan-500">tos</span></h1>
+  </div>
+  <div class="mt-10 flex flex-col gap-16">
+    {
+      PROYECTOS.map((proyecto) => {
+        const { img, tituloProyecto, descripcion, tags, link, github } = proyecto
+
+        return (
+          <article class="flex gap-x-8">
+            <img class="max-w-96 rounded-xl" src={`${img}`} alt={tituloProyecto} />
+            <div>
+              <h3 class="text-2xl font-semibold">{tituloProyecto}</h3>
+              <div class="flex felx-col flex-wrap">
+                <ul class="flex gap-2 my-2">
+                  {
+                    tags.map((tag) => (
+                    <li>
+                      <span class={`flex items-center gap-2 rounded-full text-xs ${tag.class} py-1 px-3`}>
+                        <tag.icon class="size-4" />
+                        {tag.name}
+                      </span>
+                    </li>
+                    ))
+                  }
+                </ul>
+                <p class="text-gray-400 text-balance font-medium max-w-96 mt-2">{descripcion}</p>
+                <footer class="mt-5 flex gap-2.5">
+                  {
+                    github && (
+                      <LinkButton href={github}>
+                        <Github class="size-4"/>
+                        Code
+                      </LinkButton>
+                    )
+                  }
+                  {
+                    link && (
+                      <LinkButton href={link}>
+                        <Link class="size-4"/>
+                        Preview
+                      </LinkButton>
+                    )
+                  }
+                </footer>
+              </div>
+            </div>
+          </article>
+        )
+      })
+    }
+  </div>
+</section>
