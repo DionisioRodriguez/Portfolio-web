@@ -1,1 +1,58 @@
-<section id="contacto"></section>
+---
+import { APLICACIONES } from "@consts/contacto.js"
+import ContactIcon from "@icons/Contact.astro"
+import Paperplane from "@icons/Paperplane.astro"
+---
+
+<section id="contacto" class="mt-40">
+  <div class="flex items-center gap-4">
+    <ContactIcon class="size-7" />
+    <h1 class="text-3xl font-bold">Contac<span class="bg-linear-to-r bg-clip-text text-transparent from-blue-600 to-cyan-500">to</span></h1>
+  </div>
+  <div class="flex gap-10 mt-8">
+    <div class="p-4 w-96 border-2 rounded-3xl border-white/10 bg-blue-950/10">
+      <form class="flex flex-col gap-10 px-2" action="submit">
+        <div class="flex flex-col">
+          <label class="text-lg font-medium ml-0.5 mb-1.5" for="name">Nombre</label>
+          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Ecribe tu nombre...">
+        </div>
+        <div>
+          <label class="text-lg font-medium ml-0.5 mb-1.5" for="email">Email</label>
+          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Escribe tu Email...">
+        </div>
+        <div>
+          <label class="text-lg font-medium ml-0.5 mb-1.5" for="message">Mensaje</label>
+          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Escribe un mensaje...">
+        </div>
+        <div class="flex justify-center">
+          <button class="flex justify-center items-center gap-3 text-base font-semibold cursor-pointer px-6 py-3 bg-linear-to-r from-blue-600 to-cyan-700 rounded-full hover:outline-1 transition-all">
+            <Paperplane class="size-6" />
+            Enviar mensaje</button>
+        </div>
+      </form>
+    </div>
+    <div class="p-6 border-2 rounded-3xl flex flex-col border-white/10 bg-blue-950/10">
+      <div class="flex justify-center">
+        <h2 class="font-semibold text-xl">Contacta<span class="bg-linear-to-r bg-clip-text text-transparent from-blue-600 to-cyan-500">me</span></h2>
+      </div>
+      <div class="flex flex-col justify-center h-full gap-6">
+        {
+          APLICACIONES.map((aplicacion) => {
+
+            return (
+              <a class="flex gap-x-5 bg-blue-900/30 hover:border-blue-600/85 border-2 border-gray-700/40 transition-colors rounded-xl pr-7 pl-5 py-4 items-center" href={`${aplicacion.href}`}>
+                <div class="border rounded-full p-2">
+                  <aplicacion.icon class="size-7" />
+                </div>
+                <div>
+                  <h3 class="text-lg font-semibold">{aplicacion.name}</h3>
+                  <p class="text-sm font-light text-white/65">{aplicacion.info}</p>
+                </div>
+              </a>
+            )
+          })
+        }
+      </div>
+    </div>
+  </div>
+</section>
