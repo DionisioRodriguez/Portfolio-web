@@ -14,23 +14,25 @@ import Paperplane from "@icons/Paperplane.astro"
       <form class="flex flex-col gap-10 px-2" action="submit">
         <div class="flex flex-col">
           <label class="text-lg font-medium ml-0.5 mb-1.5" for="name">Nombre</label>
-          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Ecribe tu nombre...">
+          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" name="name" id="name" placeholder="Ecribe tu nombre...">
         </div>
         <div>
           <label class="text-lg font-medium ml-0.5 mb-1.5" for="email">Email</label>
-          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Escribe tu Email...">
+          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" name="email" id="email" placeholder="Escribe tu Email...">
         </div>
         <div>
           <label class="text-lg font-medium ml-0.5 mb-1.5" for="message">Mensaje</label>
-          <input class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" type="text" placeholder="Escribe un mensaje...">
+          <textarea class="w-full border-2 font-light border-gray-700/40 bg-blue-900/30 px-4 py-2.5 rounded-lg text-base focus:border-blue-600/85 transition focus-visible:outline-0 placeholder:text-white/50" name="message" id="message" cols="30" rows="2" placeholder="Escribe un mensaje..."></textarea>
         </div>
         <div class="flex justify-center">
-          <button class="flex justify-center items-center gap-3 text-base font-semibold cursor-pointer px-6 py-3 bg-linear-to-r from-blue-600 to-cyan-700 rounded-full hover:outline-1 transition-all">
+          <button type="submit" class="flex justify-center items-center gap-3 text-base font-semibold cursor-pointer px-6 py-3 bg-linear-to-r from-blue-600 to-cyan-700 rounded-full hover:outline-1 transition-all">
             <Paperplane class="size-6" />
             Enviar mensaje</button>
         </div>
       </form>
     </div>
+
+
     <div class="p-6 border-2 rounded-3xl flex flex-col border-white/10 bg-blue-950/10">
       <div class="flex justify-center">
         <h2 class="font-semibold text-xl">Contacta<span class="bg-linear-to-r bg-clip-text text-transparent from-blue-600 to-cyan-500">me</span></h2>
