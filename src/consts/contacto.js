@@ -17,8 +17,8 @@ export const APLICACIONES = [
   },
   {
     name: "Mail",
-    info: "/dionisio.joaquin.rodriguez@gamil.com",
+    info: "/dionisio.joaquin.rodriguez@gmail.com",
     icon: Mail,
-    href: "mailto:dionisio.joaquin.rodriguez@gamil.com"
+    href: "mailto:dionisio.joaquin.rodriguez@gmail.com"
   } 
 ]
