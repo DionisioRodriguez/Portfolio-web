@@ -7,7 +7,7 @@ export const APLICACIONES = [
     name: "LinkedIn",
     info: "/in/DionisioRodriguez",
     icon: LinkedIn,
-    href: ""
+    href: "https://www.linkedin.com/in/dionisio-rodriguez-46388632a/"
   },
   {
     name: "GitHub",
